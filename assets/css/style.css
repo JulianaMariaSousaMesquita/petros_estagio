@@ -30,11 +30,6 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     display: none;
 }
 
-.footer p  {
-    color: var(--corTextPrimaria);
-    text-align: center;
-}
-
 a{
     text-decoration: none;
 }
@@ -128,7 +123,7 @@ main .column{
     padding: 20px;
 }
 main .column section{
-    border-bottom: 1px solid #d4e9ff;
+    border-bottom: 1px solid #6FAAAA;
     margin: 0 0 20px;
     min-height: 187px;
     color:var(--corTextoSecudaria);
@@ -183,13 +178,13 @@ label span{
     width: 20px;
     height: 20px;
     display: block;
-    background-color: #d4e9ff;
+    background-color: #6FAAAA;
     border-radius: 100%;
     transition: all ease .3s;
 }
 
 .ativar-dark:checked ~ .dark-mode label{
-    background-color: #d4e9ff;
+    background-color: #6FAAAA;
 }
 .ativar-dark:checked ~ .dark-mode label span{
     background-color: var(--corBackgroundSecundaria);
@@ -266,7 +261,7 @@ label span{
         text-align: left;
     }
     main .column section{
-        /* border: 2px solid #d4e9ff; */
+        /* border: 2px solid #6FAAAA; */
         border: 2px solid transparent;
         padding: 20px;
         position: relative;
@@ -280,27 +275,33 @@ label span{
     }
     main .column section .top-right{
         top: -2px;
-        left: -2px;
+        left: -2px;     
         animation-name: increaseWidth, increaseHeight;
         animation-duration: 1s, 1s;
         animation-delay: 2s, 3s;
         animation-fill-mode: forwards;
-        border-top-color: #d4e9ff;
-        border-right-color: #d4e9ff;
+        border-top-color: #6FAAAA;
+        border-right-color: #6FAAAA;
     }
     main .column section .bootom-left{
         bottom: -2px;
-        right: -2px;
+        right: -2px;        
         animation-name: increaseWidth, increaseHeight;
         animation-duration: 1s, 1s;
         animation-delay: 4s, 5s;
         animation-fill-mode: forwards;
-        border-bottom-color: #d4e9ff;
-        border-left-color: #d4e9ff;
+        border-bottom-color: #6FAAAA;
+        border-left-color: #6FAAAA;
     }
     main .column{
         padding: 0;
     }
+
+    main .column a span {        
+        animation:infinite alternate; 
+    }
+
+
     footer nav .social-media li{
         margin: 0  14px;
         text-align: center;
@@ -317,3 +318,76 @@ label span{
     }
     
 }
+
+
+
+/* Span quando passa o mouse */
+
+/* Add this attribute to the element that needs a tooltip */
+
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  /* Hide the tooltip content by default */
+  
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Position tooltip above the element */
+  
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    border-radius: 2px;
+    border: 1px outset #C0C0C0;
+    box-shadow: 3px 2px 5px #9F9F9F;
+    background-color: #000;
+    background-color: hsla(206, 73%, 34%, 0.9);
+    color: #FFFFFF;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 11px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  /* Triangle hack to make tooltip look like a speech bubble */
+  
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(206, 73%, 34%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+  /* Show tooltip content on hover */
+  
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+
+  
