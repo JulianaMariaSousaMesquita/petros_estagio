@@ -278,7 +278,7 @@ label span{
         left: -2px;     
         animation-name: increaseWidth, increaseHeight;
         animation-duration: 1s, 1s;
-        animation-delay: 2s, 3s;
+        animation-delay: 60s, 61s;  /* 2s, 3s */
         animation-fill-mode: forwards;
         border-top-color: #6FAAAA;
         border-right-color: #6FAAAA;
@@ -288,7 +288,7 @@ label span{
         right: -2px;        
         animation-name: increaseWidth, increaseHeight;
         animation-duration: 1s, 1s;
-        animation-delay: 4s, 5s;
+        animation-delay: 64s, 65s; /* 4s, 5s */
         animation-fill-mode: forwards;
         border-bottom-color: #6FAAAA;
         border-left-color: #6FAAAA;
